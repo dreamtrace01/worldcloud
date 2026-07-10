@@ -228,9 +228,10 @@
   var PALETTE = ["#FFC94D","#FF7A59","#6EC6FF","#7FE3A8","#C9A7FF","#F2F5FA"];
   var LS_DB = "wc_db_url";
   var LS_CID = "wc_client_id";
+  var BUILTIN_DB = "https://worldcloud-d4023-default-rtdb.asia-southeast1.firebasedatabase.app";
 
   var state = {
-    db: (localStorage.getItem(LS_DB) || "").replace(/\/+$/,""),
+    db: (localStorage.getItem(LS_DB) || BUILTIN_DB || "").replace(/\/+$/,""),
     role: null,
     room: null,
     question: "",
